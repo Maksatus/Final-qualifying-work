@@ -57,9 +57,12 @@ public class Player : MonoBehaviour
         }
         else
         {
-            if(_objEffect) 
+            if (_objEffect)
+            {
                 _objEffect.highlighted = false;
-            
+                _objEffect = null;
+            }
+
             message.InfoPanelSwitch(false,"");
             message.Message(false);
         }
