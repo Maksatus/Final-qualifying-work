@@ -2,12 +2,17 @@
 using UnityEngine.UI;
 public class GameManagerAndUI : MonoBehaviour
 {
-	[Header("UI Settings")]
-	public bool showInteractText;
-	public Text interactText;
-	
-	void Update()
+	[SerializeField] private Text interactText;
+	[Header("Panel")]
+	[SerializeField] private GameObject infoPanel;
+	[SerializeField] private Text textInfoPanel;
+	public void Message(bool showInteractText)
 	{
 		interactText.text = showInteractText ? "Нажмите [F] для подробной информации" : "";
+	}
+	public void InfoPanelSwitch(bool state,string info)
+	{
+		infoPanel.gameObject.SetActive(state);
+		textInfoPanel.text = info;
 	}
 }
