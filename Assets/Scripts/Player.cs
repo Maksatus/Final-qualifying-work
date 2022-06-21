@@ -31,29 +31,6 @@ public class Player : MonoBehaviour
                 message.InfoPanelSwitch(true,text);
                 Debug.Log(weapon.collider.gameObject.name);
             }
-/*
-                if (true)//buttonF
-                {
-                    if (Weapons.Length > 0)
-                    {
-                        if (Weapons[hitweapon.transform.GetComponent<Weapon>().WeaponSwitchID].Unlocked == false)
-                        {
-                            Weapons[hitweapon.transform.GetComponent<Weapon>().WeaponSwitchID].Unlocked = true;
-                            Weapons[hitweapon.transform.GetComponent<Weapon>().WeaponSwitchID].TotalBullets += hitweapon.transform.GetComponent<Weapon>().BulletsAmounts;
-                            Destroy(hitweapon.transform.gameObject);
-                        }
-                        else
-                        {
-                            Weapons[hitweapon.transform.GetComponent<Weapon>().WeaponSwitchID].TotalBullets += hitweapon.transform.GetComponent<Weapon>().BulletsAmounts;
-                            Destroy(hitweapon.transform.gameObject);
-                        }
-                    }
-                    else
-                    {
-                        Debug.LogWarning("The Third Person Controller does not yet have any weapons registered to the ID:" + hitweapon.transform.GetComponent<Weapon>().WeaponSwitchID + " don't you forget to link any existing weapons within the hand of the third person controller with this ID?");
-                    }
-                }
-                */
         }
         else
         {
